@@ -32,4 +32,14 @@ App.controller('MainController', function ($rootScope, $scope, $http, $sce, $win
 
   });
 
+  $('#datatable').on('click', 'tr', function () {
+      var table = $('#datatable').DataTable();
+      console.log( table.row( this ).data() );
+  });
+
+
+
+
+
+
 });
