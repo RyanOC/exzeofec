@@ -5,12 +5,14 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build-css": "node-sass --include-path scss scss/main.scss web/css/main.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "connect": "^3.4.1",
+    "node-sass": "^3.8.0",
     "serve-static": "^1.11.1"
   }
 }

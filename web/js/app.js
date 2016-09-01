@@ -13,6 +13,7 @@ App.controller('MainController', function ($rootScope, $scope, $http, $sce, $win
           var result = results[i];
           arrayReturn.push([
             i + 1,
+            "<img src='" + result['im:image'][0]['label'] + "'>",
             result['im:name']['label'],
             result['im:artist']['label']
           ]);
@@ -23,6 +24,7 @@ App.controller('MainController', function ($rootScope, $scope, $http, $sce, $win
         data: arrayReturn
         ,columns: [
             { title: "Position" },
+            { title: "" },
             { title: "Album Name" },
             { title: "Artist" }
         ]
