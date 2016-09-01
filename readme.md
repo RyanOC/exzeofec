@@ -18,16 +18,17 @@ $ npm start
 
 
 ###To Recompile SASS###
-	npm run build-css
+$ npm run build-css
 
 
   -------
-  ###Technologies Used
+
+### Technologies Used
 
   * Angular 1.3
-  + Bootstrap 3
-  + jquery
-  + SASS
-  + NodeJS
-  + JQuery DataTables
-  + CSS Animation
+  * Bootstrap 3
+  * jquery
+  * SASS
+  * NodeJS
+  * JQuery DataTables
+  * CSS Animation
