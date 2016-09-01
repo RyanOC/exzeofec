@@ -18,6 +18,9 @@ table tr:hover {
 #datatable_wrapper {
   margin-bottom: 50px; }
 
+.hide_column {
+  display: none; }
+
 /* End Datatable styles */
 /* Begin sub text animation styles */
 @keyframes type {

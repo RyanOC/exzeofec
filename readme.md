@@ -1,7 +1,7 @@
 iTunes Top 100
 ====================
 
-A test app to display the top 100 songs from the iTunes API.
+An app to display the top 100 albums from the iTunes API based on the set requirements from Exzeo's Front End Challenge [https://github.com/exzeo/FrontEndChallenge](https://github.com/exzeo/FrontEndChallenge)
 
 
 ###Getting Started###
@@ -13,3 +13,15 @@ A test app to display the top 100 songs from the iTunes API.
 
 ###To Recompile SASS###
 	npm run build-css
+
+
+  -------
+  ### Technologies Used
+
+  * Angular 1.3
+  + Bootstrap 3
+  + jquery
+  + SASS
+  + NodeJS
+  + JQuery DataTables
+  + CSS Animation

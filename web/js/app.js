@@ -12,10 +12,12 @@ App.controller('MainController', function ($rootScope, $scope, $http, $sce, $win
       for (var i = 0, len = data.feed.entry.length; i < len; i++) {
           var result = results[i];
           arrayReturn.push([
-            i + 1,
             "<img src='" + result['im:image'][0]['label'] + "'>",
+            i + 1,
             result['im:name']['label'],
-            result['im:artist']['label']
+            result['im:artist']['label'],
+            result['id']['label']
+            //,result['category']['attributes']['label']
           ]);
       }
 
@@ -23,20 +25,34 @@ App.controller('MainController', function ($rootScope, $scope, $http, $sce, $win
         responsive: true,
         data: arrayReturn
         ,columns: [
-            { title: "Position" },
-            { title: "" },
+            { title: "", "width": "80px" },
+            { title: "#", "width": "50px" },
             { title: "Album Name" },
-            { title: "Artist" }
+            { title: "Artist" },
+            { title: "id", className: "hide_column"},
+            {"defaultContent": "<button type='button' class='btn btn-default'>more</button>"}
         ]
     } );
 
   });
 
-  //todo: get the id and show a modal with more data
-  $('#datatable').on('click', 'tr', function () {
-      var table = $('#datatable').DataTable();
-      console.log( table.row( this ).data() );
-  });
+  //launch a new tab with the details of the album
+  $('#datatable').on( 'click', 'button', function () {
+        var table = $('#datatable').DataTable();
+        var row = $(this).closest('tr');
+        var nRow = row[0];
+        var data = table.row( nRow ).data();
+        var win = window.open(data[4], '_blank');
+        win.focus();
+    } );
+
+  //launch a new tab with the details of the album
+  // $('#datatable').on('click', 'tr', function () {
+  //     var table = $('#datatable').DataTable();
+  //     console.log( table.row( this ).data() );
+  //     $('#myModal').modal('show');
+  //     $(".modal-body #customId").html( table.row( this ).data()[4] );
+  // });
 
   //auto scroll the page to the top when the user interacts with pagination controls
   $('#datatable').on( 'order.dt',  function () { console.log('Order' ); } )
