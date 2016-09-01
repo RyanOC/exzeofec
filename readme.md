@@ -8,10 +8,10 @@ Live Demo: [http://exzeofec.s3-website-us-west-2.amazonaws.com](http://exzeofec.
 
 ###Getting Started###
   ```
-  git clone git@github.com:RyanOC/exzeofec.git
-  cd exzeofec
-	npm install
-	npm start
+$ git clone git@github.com:RyanOC/exzeofec.git
+$ cd exzeofec
+$ npm install
+$ npm start
 
   ```
 
@@ -22,7 +22,7 @@ Live Demo: [http://exzeofec.s3-website-us-west-2.amazonaws.com](http://exzeofec.
 
 
   -------
-  ### Technologies Used
+  ###Technologies Used
 
   * Angular 1.3
   + Bootstrap 3
