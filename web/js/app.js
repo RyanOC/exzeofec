@@ -32,14 +32,14 @@ App.controller('MainController', function ($rootScope, $scope, $http, $sce, $win
 
   });
 
+  //todo: get the id and show a modal with more data
   $('#datatable').on('click', 'tr', function () {
       var table = $('#datatable').DataTable();
       console.log( table.row( this ).data() );
   });
 
-
-
-
-
-
+  //auto scroll the page to the top when the user interacts with pagination controls
+  $('#datatable').on( 'order.dt',  function () { console.log('Order' ); } )
+        .on( 'search.dt', function () {console.log('Search' ); } )
+        .on( 'page.dt',   function () { $("html, body").animate({ scrollTop: 0 }, "slow"); } )
 });

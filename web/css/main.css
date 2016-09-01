@@ -15,6 +15,9 @@ table tr td {
 table tr:hover {
   cursor: pointer; }
 
+#datatable_wrapper {
+  margin-bottom: 50px; }
+
 /* End Datatable styles */
 /* Begin sub text animation styles */
 @keyframes type {
