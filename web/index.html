@@ -16,42 +16,27 @@
   <script src="/js/musicservice.js"></script>
   <script src="/js/appconfig.js"></script>
 
+
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.1/css/jquery.dataTables.css">
+  <script type='text/javascript' src="//cdn.datatables.net/1.10.1/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/1.0.0/css/dataTables.responsive.css">
+  <script type='text/javascript' src="//cdn.datatables.net/responsive/1.0.0/js/dataTables.responsive.js"></script>
+
 </head>
 <body>
 
 <div ng-app="App" ng-controller="MainController" class="ng-app">
 
   <div class="jumbotron text-center">
-    <h1>My Bootstrap Page</h1>
-    <p>Resize this responsive page to see the effect!</p>
+    <h1>iTunes Top 100 Albums</h1>
+    <p>Browse the current chart toppers!</p>
   </div>
 
   <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <h3>Column 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-      <div class="col-sm-4">
-        <h3>Column 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-      <div class="col-sm-4">
-        <h3>Column 3</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-    </div>
+
+    <table id="datatable" class="display" width="100%"></table>
+
   </div>
-
-</div>
-
-
-
-
-
 
 </body>
 </html>
