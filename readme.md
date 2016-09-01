@@ -18,7 +18,11 @@ $ npm start
 
 
 ###To Recompile SASS###
+
+```
 $ npm run build-css
+
+```
 
 
   -------
