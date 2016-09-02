@@ -49,7 +49,7 @@ App.controller('MainController', function ($scope, AppConfig, MusicService) {
         var row = $(this).closest('tr');
         var nRow = row[0];
         var data = table.row( nRow ).data();
-        var win = window.open(data[4], '_blank');
+        var win = window.open(data[3], '_blank');
         win.focus();
     } );
 
