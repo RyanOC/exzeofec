@@ -21,22 +21,22 @@ App.controller('MainController', function ($scope, AppConfig, MusicService) {
           "<img src='" + result['im:image'][1]['label'] + "'>",
           i + 1,
           result['im:name']['label'],
-          result['im:artist']['label'],
+          //result['im:artist']['label'],
           result['id']['label']
         ]);
     }
 
     //add the data to the datatable
     $('#datatable').DataTable( {
-      responsive: false,
+      responsive: true,
       data: arrayReturn
       ,columns: [
           { title: "", "width": "80px" },
           { title: "#", "width": "50px" },
           { title: "Album Name" },
-          { title: "Artist" },
+          //{ title: "Artist" },
           { title: "id", className: "hide_column"}
-          ,{"defaultContent": "<button type='button' class='btn btn-default'>more</button>"}
+          ,{"defaultContent": "<button type='button' class='btn btn-link'>more</button>"}
       ]
     });
 

@@ -14,12 +14,21 @@ table tr td {
 .hide_column{
     display : none;
 }
+
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 5px 5px !important;
+}
 /* End Datatable styles */
 
 /* Begin Bootstrap Override Styles */
 
 .jumbotron {
   padding-bottom: 0px !important;
+}
+
+.container {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
 
 /* End Bootstrap Override Styles* /
