@@ -1,4 +1,5 @@
 $bodycolor: #fff;
+$headerfontcolor: #333;
 
 body {
   margin: 0;
@@ -6,44 +7,28 @@ body {
 }
 
 /* Begin Datatable styles */
-table tr {
-  background-color: #fff !important;
-}
-
-table tr:hover {
-  background-color: #f5f5f5 !important;
-}
-
 table tr td {
   background-color: #fff !important;
 }
-
-table tr:hover { cursor: pointer; }
-
-
 #datatable_wrapper {margin-bottom: 50px;}
-
 .hide_column{
     display : none;
 }
-
-// table tr td:first-child {
-//     background-color: #ff00ff !important;
-// }
-
-// table tr td:hover {
-//   background-color: #00ff00 !important;
-// }
-
 /* End Datatable styles */
 
-/* Begin sub text animation styles */
+/* Begin Bootstrap Override Styles */
 
+.jumbotron {
+  padding-bottom: 0px !important;
+}
+
+/* End Bootstrap Override Styles* /
+
+/* Begin sub text animation styles */
 @keyframes type{
   from { width: 0; }
   to { width: 100%; }
 }
-
 @keyframes hide {
     to {
         width:0;
@@ -51,47 +36,63 @@ table tr:hover { cursor: pointer; }
         /*overflow:hidden;*/
     }
 }
-
 #subtext-container {
   visibility: visible;
-  /*animation: hide 15s forwards linear;*/
   width: 210px;
   height:60px;
   margin: 0 auto;
   overflow: visible;
 }
-
 #subtext-container .frame-wrapper div {
-
-  color: #333;
+  color: $headerfontcolor;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
   visibility: visible;
   text-align:left;
 }
-
 #subtext-container #frame-1-wrapper {
   visibility: visible;
+  -webkit-animation: hide 5s forwards linear;
+  -moz-animation: hide 5s forwards linear;
+  -ms-animation: hide 5s forwards linear;
   animation: hide 5s forwards linear;
 }
-
 #subtext-container #frame-2-wrapper {
   visibility: visible;
+  -webkit-animation: hide 10s forwards linear;
+  -moz-animation: hide 10s forwards linear;
+  -ms-animation: hide 10s forwards linear;
   animation: hide 10s forwards linear;
 }
-
 #subtext-container .frame-wrapper #frame-1 {
+  -webkit-animation: hide 1s forwards linear;
+  -moz-animation: hide 1s forwards linear;
+  -ms-animation: hide 1s forwards linear;
   animation: type 1s forwards linear;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
   animation-delay: 0s;
 }
 #subtext-container .frame-wrapper #frame-2 {
+  -webkit-animation: hide 1s forwards linear;
+  -moz-animation: hide 1s forwards linear;
+  -ms-animation: hide 1s forwards linear;
   animation: type 1s forwards linear;
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -ms-animation-delay: 3s;
   animation-delay: 3s;
 }
 #subtext-container .frame-wrapper #frame-3 {
+  -webkit-animation: hide 1s forwards linear;
+  -moz-animation: hide 1s forwards linear;
+  -ms-animation: hide 1s forwards linear;
   animation: type 1s forwards linear;
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  -ms-animation-delay: 5s;
   animation-delay: 5s;
 }
-
 /* End sub text animation styles */

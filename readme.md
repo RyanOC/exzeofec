@@ -12,7 +12,6 @@ $ git clone git@github.com:RyanOC/exzeofec.git
 $ cd exzeofec
 $ npm install
 $ npm start
-
   ```
 
 
@@ -21,7 +20,6 @@ $ npm start
 
 ```
 $ npm run build-css
-
 ```
 
 
