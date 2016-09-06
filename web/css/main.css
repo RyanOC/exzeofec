@@ -15,6 +15,9 @@ table tr td {
 table.dataTable tbody th, table.dataTable tbody td {
   padding: 5px 5px !important; }
 
+.chart-number {
+  font-size: 20px; }
+
 /* End Datatable styles */
 /* Begin Bootstrap Override Styles */
 .jumbotron {

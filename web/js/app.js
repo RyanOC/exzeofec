@@ -19,7 +19,7 @@ App.controller('MainController', function ($scope, AppConfig, MusicService) {
         var result = results[i];
         arrayReturn.push([
           "<img src='" + result['im:image'][1]['label'] + "'>",
-          i + 1,
+          "<span class='chart-number'>" + (i + 1) + "</span>",
           result['im:name']['label'],
           //result['im:artist']['label'],
           result['id']['label']
@@ -28,15 +28,17 @@ App.controller('MainController', function ($scope, AppConfig, MusicService) {
 
     //add the data to the datatable
     $('#datatable').DataTable( {
-      responsive: true,
+      //responsive: true,
+      pagingType: "simple",
+      order: [[ 1, "asc" ]],
       data: arrayReturn
       ,columns: [
-          { title: "", "width": "80px" },
-          { title: "#", "width": "50px" },
-          { title: "Album Name" },
+          { title: "", "width": "80px", "orderable": false },
+          { title: "Position", "width": "30px" },
+          { title: "Album", "width": "70%" },
           //{ title: "Artist" },
           { title: "id", className: "hide_column"}
-          ,{"defaultContent": "<button type='button' class='btn btn-link'>more</button>"}
+          ,{"defaultContent": "<button type='button' class='btn btn-link'>buy now</button>", "orderable": false}
       ]
     });
 
